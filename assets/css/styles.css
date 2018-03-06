@@ -1,10 +1,22 @@
 .gif{
 float:left;
-padding: 20px;
+padding: 12px;
+}
+.userPick{
+display: inline-block;
+
 }
 
 .gifBtn{
 margin: 8px;  
 
 }
+
+body, html, .container-fluid {
+    background-image: url("../spongebob.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 

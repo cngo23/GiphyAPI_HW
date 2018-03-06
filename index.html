@@ -42,12 +42,15 @@
                         <div id="gifButtons"></div>
                 </div>
                 <div class="col-md-4">
-                    <form id="gifForm">
-                        <label for="gifInput"></label>
-                        <input type="text" id="gifInput">
 
-                        <input id="addGif" class="btn btn-outline-primary btn-rounded btn-sm my-0" type="submit" value="Another One">
-                    </form>
+                    <form class="form-inline" id="gifForm">
+                        
+                        <div class="form-group mx-sm-3 mb-2">
+                          <label for="gifInput" class="sr-only">Gif Adder</label>
+                          <input type="text" class="form-control" id="gifInput" placeholder="Add">
+                        </div>
+                        <button id="addGif" type="submit" class="btn btn-dark mb-2">Another One</button>
+                      </form>
                 </div>
             </div>
             

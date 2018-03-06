@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-    var cartoons = ["Bugs Bunny", "The Simpsons", "SpongeBob", "Dexter's Laboratory"];
+    var cartoons = ["Bugs Bunny", "The Simpsons", "SpongeBob", "Dexter's Laboratory", "Mickey Mouse"];
 
     function displayGifs() {
         var cartoon = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cartoon + "&api_key=ivZ1e4C58StoCCZcRa3s4zTvf47LqPZ6&limit=10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cartoon + "&api_key=ivZ1e4C58StoCCZcRa3s4zTvf47LqPZ6&limit=15";
 
         $.ajax({
             url: queryURL,
@@ -17,13 +17,23 @@ $(document).ready(function () {
             for (var i = 0; i < results.length; i++) {
 
                 var imgDiv = $("<div>").addClass("userPick");
+
+                var ratings = results[i].rating;
+                console.log(ratings);
                 
                 var stillImg = results[i].images.fixed_width_still.url;
                 var playImg = results[i].images.fixed_width.url;
 
+                //var rated = $("<p>").addClass("rating").attr("data-rating",ratings);
+                
+                //var ratingP = $("<p>").addClass("rating");
+                //ratingP.append(ratings);
+                //$("#gifArea").append(ratingP);
+                
+
                 var gif = $("<img>").addClass("gif").attr("src", stillImg).attr("data-still", stillImg).attr("data-animate", playImg).attr("data-state", "still");
 
-                imgDiv.append(gif)
+                imgDiv.append(gif);
                 $("#gifArea").append(imgDiv);
 
             }
@@ -51,7 +61,7 @@ $(document).ready(function () {
 
         for (var i = 0; i < cartoons.length; i++) {
             var c = $("<button>");
-            c.addClass("gifBtn btn btn-outline-danger");
+            c.addClass("gifBtn btn btn-outline-dark");
             c.attr("data-name", cartoons[i]);
             c.text(cartoons[i]);
 
