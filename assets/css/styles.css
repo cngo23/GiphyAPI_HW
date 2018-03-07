@@ -1,6 +1,6 @@
 .gif{
 float:left;
-padding: 12px;
+padding: 1px 12px 10px 12px;
 }
 .userPick{
 display: inline-block;
@@ -12,10 +12,15 @@ margin: 8px;
 
 }
 
-body, html, .container-fluid {
+/* body, html, .container-fluid {
     background-image: url("../spongebob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+} */
+
+p{
+    text-align: center;
+    
 }
 
 

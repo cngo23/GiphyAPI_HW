@@ -24,13 +24,9 @@ $(document).ready(function () {
                 var stillImg = results[i].images.fixed_width_still.url;
                 var playImg = results[i].images.fixed_width.url;
 
-                //var rated = $("<p>").addClass("rating").attr("data-rating",ratings);
-                
-                //var ratingP = $("<p>").addClass("rating");
-                //ratingP.append(ratings);
-                //$("#gifArea").append(ratingP);
-                
-
+                var ratingP = $("<p>").text("Rating: " + ratings);
+                imgDiv.append(ratingP);
+              
                 var gif = $("<img>").addClass("gif").attr("src", stillImg).attr("data-still", stillImg).attr("data-animate", playImg).attr("data-state", "still");
 
                 imgDiv.append(gif);
