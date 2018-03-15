@@ -6,6 +6,10 @@ $(document).ready(function () {
         var cartoon = $(this).attr("data-name");
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cartoon + "&api_key=ivZ1e4C58StoCCZcRa3s4zTvf47LqPZ6&limit=15";
 
+        //var queryURL = "http://api.giphy.com//v1/gifs/random"
+        //"http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5"
+        //var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=ivZ1e4C58StoCCZcRa3s4zTvf47LqPZ6&tag=" + cartoon 
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -15,7 +19,7 @@ $(document).ready(function () {
 
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
-
+                
                 var imgDiv = $("<div>").addClass("userPick");
 
                 var ratings = results[i].rating;
@@ -46,6 +50,8 @@ $(document).ready(function () {
                     }
 
                 });
+
+            
 
         })
 
