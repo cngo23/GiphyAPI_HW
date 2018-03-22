@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     function displayGifs() {
         var cartoon = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cartoon + "&api_key=ivZ1e4C58StoCCZcRa3s4zTvf47LqPZ6&limit=15";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + cartoon + "&api_key=ivZ1e4C58StoCCZcRa3s4zTvf47LqPZ6&limit=15";
 
         //var queryURL = "http://api.giphy.com//v1/gifs/random"
         //"http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5"
